@@ -1,5 +1,8 @@
-all: pru_code 
+all: Build/prucode.bin Build/prucode_bin.h
 
-pru_code: prucode.p prucode.hp
-	pasm prucode.hp
+Build/prucode_bin.h: prucode.p prucode.hp
+	pasm -c prucode.p Build/prucode
+
+Build/prucode.bin: prucode.p prucode.hp
+	pasm -b prucode.p Build/prucode
 	
