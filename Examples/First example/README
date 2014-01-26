@@ -1,0 +1,3 @@
+A simple PRU example to show that the PRU is working with custom code. The result should be that the first of the LEDs blinks 10 times and then the program will exit. All pin toggling and timing is done on the PRU unit.
+
+Dont forget to modprobe uio_pruss otherwise you might get a segmentation fault.
